@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;700&family=Poppins:wght@300;500;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+  background-color: #721717;
+}
+
+/*Estilização Do Site em Si*/
+body .content {
+  width: 97vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.content h1 {
+  margin-bottom: 30px;
+  color: #6ab0f0;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.content .main-flags-content {
+  background-color: #af3c3c;
+  width: 90%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+main .flags-list {
+  display: flex;
+  /*quebra a linha se chegar ao máximo de tamanho do elemento pai*/
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  gap: 40px; /*espaçamento entre os elementos*/
+/* overflow-y: scroll; */
+}
+
+main .flags-list li {
+  background: rgba(63, 8, 8, 0.5); 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 240px;
+  max-height: 240px;
+  width: 50%;
+  height: 400px;
+  border-radius: 10px;
+  margin: 30px 10px;
+}
+
+main .flags-list li .all-li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+  height: 100%; 
+}
+
+main .flags-list li .all-li span {
+  font-size: 20px;
+  font-weight: 300;
+  color: #6ab0f0;
+  margin-bottom: 20px;
+}
+
+main .flags-list li .all-li .box-flag {
+  position: relative;
+  max-width: 270px;
+  max-height: 150px;
+  width: 80%; 
+  height: 60%; 
+  background-color: white;
+}
+
+.content h1:hover,
+main .flags-list li .all-li span:hover,
+main .flags-list li:hover {
+  transition: 0.2s ease-in-out; 
+  color: #7ebffb;
+  cursor: pointer;
+  transform: scale(1.08);
+}
+
+/*Bandeiras*/
+
+/* valores da caixa branca para colocar a bandeira:
+width: 270px
+height: 150px */ 
+
+.red, 
+.blue,
+.black, 
+.green, 
+.yellow, 
+.white {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+ /*Monaco*/
+#monaco .red {
+  background-color: #ce1126;
+  height: 50%;
+}
+
+/* França*/
+#franca .blue {
+  background-color: #002654;
+  width: 33.3%;
+}
+
+#franca .red {
+  background-color: #ce1126;
+  width: 33.3%;
+  right: 0;
+}
+
+ /*Bélgica*/
+#belgica .black {
+  background-color: black;
+  width: 33.3%;
+}
+
+#belgica .yellow {
+  background-color: #fdda25;
+  width: 33.3%;
+  left: 33.3%;
+}
+
+#belgica .red {
+  background-color: #ce1126;
+  width: 33.3%;
+  right: 0;
+}
+
+/*Itália*/
+#italia .green {
+  background-color: #009246;
+  width: 33.3%;
+}
+
+#italia .red {
+  background-color: #ce1126;
+  width: 33.3%;
+  right: 0;
+}
+
+ /*Botswana*/
+#botswana .blue {
+  background-color: #6da9d2;
+  top: 0;
+  z-index: 0;
+}
+
+#botswana .black {
+  background-color: black;
+  height: 20%;
+  bottom: 40%;
+  z-index: 2;
+}
+
+
+#botswana .white {
+  background-color: #ffffff;
+  height: 33%;
+  bottom: 33%;
+  z-index: 1;
+}
+
+/*Laos*/
+#laos {
+  background-color: #ce1126;
+}
+
+#laos .blue {
+  background-color: #002868;
+  height: 45%;
+  bottom: 26%; 
+}
+
+#laos .white {
+  background-color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  z-index: 2;
+  margin: 24% 0 0 35%;
+}
+
+/*Japão*/
+#japao .red {
+  background-color: red;
+  width: 20%;
+  height: 30%;
+  left: 50%;
+  top: 50%;
+  border-radius: 100%;
+  /*Procurar entender a linha:*/
+  /*top */
+  margin: -10% 0 0 -10%;
+}
+
+/*MEDIA QUERIE*/
+@media screen and (max-width: 640px) {
+  .content h1 {
+  font-size: 20px;
+  }
+
+  main .flags-list li .all-li span {
+  font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 150px) {
+  .content h1 {
+  font-size: 15px;
+  }
+
+  main .flags-list li .all-li span {
+  font-size: 8px;
+  }
+}
